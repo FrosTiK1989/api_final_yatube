@@ -1,0 +1,38 @@
+GET http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NTQ0NDYwLCJqdGkiOiJjNzE0ZTAzNjk2YzQ0ZjM4OWNjYjk3MzcyYTQ3NjY5NCIsInVzZXJfaWQiOjF9.IxFtG4MhhSUwdZQ6jGIepcLPA32-XpH-_yTQSXayFww
+
+###
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "FrosT",
+    "password": "FrosTiK_2012"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "FrosT1989",
+    "password": "FrosTiK_2012"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/posts/1/comments/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NTQ0NDYwLCJqdGkiOiJjNzE0ZTAzNjk2YzQ0ZjM4OWNjYjk3MzcyYTQ3NjY5NCIsInVzZXJfaWQiOjF9.IxFtG4MhhSUwdZQ6jGIepcLPA32-XpH-_yTQSXayFww
+Content-Type: application/json
+
+{
+    "text": "Это тестовый comment с POST запроса"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NTQ0NDYwLCJqdGkiOiJjNzE0ZTAzNjk2YzQ0ZjM4OWNjYjk3MzcyYTQ3NjY5NCIsInVzZXJfaWQiOjF9.IxFtG4MhhSUwdZQ6jGIepcLPA32-XpH-_yTQSXayFww
+
+{
+    
+}
