@@ -34,5 +34,5 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NTQ0NDYwLCJqdGkiOiJjNzE0ZTAzNjk2YzQ0ZjM4OWNjYjk3MzcyYTQ3NjY5NCIsInVzZXJfaWQiOjF9.IxFtG4MhhSUwdZQ6jGIepcLPA32-XpH-_yTQSXayFww
 
 {
-    
+    "following": "FrosT1989"
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 from posts.models import Follow, Group, Post
-from rest_framework import permissions, viewsets
+from rest_framework import mixins, permissions, viewsets
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
@@ -14,13 +14,16 @@ from .serializers import (
 )
 
 
-class FollowViewSet(viewsets.ModelViewSet):
+class FollowViewSet(
+    mixins.CreateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet
+):
     serializer_class = FollowSerializer
     filter_backends = (SearchFilter,)
     search_fields = ("following__username",)
 
     def get_queryset(self):
-        return Follow.objects.filter(user=self.request.user)
+        queryset = self.request.user.follower.all()
+        return queryset
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
